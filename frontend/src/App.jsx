@@ -42,11 +42,11 @@ const App = () => {
         />
         <Route
           path="/survey-data"
-          element={isAdmin ? <AllSurveyData /> : <Home />}
+          element={isAdmin && token ? <AllSurveyData /> : <Home />}
         />
         <Route
           path="/survey-data/:surveyId"
-          element={isAdmin ? <SingleSurvey /> : <Home />}
+          element={isAdmin && token ? <SingleSurvey /> : <Home />}
         />
       </Routes>
     </BrowserRouter>
